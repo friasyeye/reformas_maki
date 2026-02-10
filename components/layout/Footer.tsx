@@ -6,7 +6,7 @@ import { Phone, Mail, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-stone-900 text-white py-24">
+    <footer className="bg-slate-900 text-white py-24">
       <Container>
         {/* 
            MODIFIED GRID: 
@@ -15,24 +15,21 @@ export const Footer: React.FC = () => {
            Desktop: md:grid-cols-4 remains standard.
         */}
         <div className="grid grid-cols-[1fr_2fr] md:grid-cols-4 gap-y-12 gap-x-6 md:gap-8">
-          
+
           {/* Logo Section: Spans 2 cols on mobile (full width) and 2 cols on desktop */}
           <div className="col-span-2 md:col-span-2">
             {/* Logo Image replaced text title */}
-            <img 
-              src="https://i.ibb.co/wZs1yP5F/Logo-completo-camisetas-copia.png" 
-              alt="RENOVAMARIN" 
-              // UPDATED SIZE: Reduced slightly more to h-6 md:h-8
-              className="h-6 md:h-8 w-auto object-contain mb-6"
-              style={{
-                filter: 'brightness(0) saturate(100%) invert(73%) sepia(31%) saturate(958%) hue-rotate(358deg) brightness(89%) contrast(85%)'
-              }}
+            <img
+              src="https://i.ibb.co/C3vNcbys/unnamed-removebg-preview.png"
+              alt="RENOVAMARIN"
+              // TRIPLED SIZE AND WHITE COLOR: Increased to h-36 md:h-48, made white with filters
+              className="h-36 md:h-48 w-auto object-contain mb-6 brightness-0 invert"
             />
             <p className="text-stone-400 font-light max-w-sm">
               Creamos hogares con alma. Reformas exclusivas diseñadas para que cada rincón de tu casa cuente tu historia.
             </p>
           </div>
-          
+
           {/* Navigation: Narrower column on mobile */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-stone-500">Navegación</h3>
@@ -60,10 +57,10 @@ export const Footer: React.FC = () => {
                 <span className="whitespace-nowrap">+34 667 80 49 73</span>
               </li>
               <li>
-                <a 
-                  href="https://www.instagram.com/renovamarin/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.instagram.com/renovamarin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 hover:text-white transition-colors group"
                 >
                   <Instagram className="w-4 h-4 text-stone-500 group-hover:text-stone-400 transition-colors min-w-[16px]" />
@@ -73,7 +70,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-16 md:mt-24">
           {/* Legal Links - Repositioned: Just above the horizontal divider line */}
           <div className="flex flex-wrap gap-4 mb-6 text-xs text-stone-500 font-light">
@@ -96,11 +93,11 @@ export const Footer: React.FC = () => {
               <p>© {new Date().getFullYear()} Renovamarin.</p>
               <span className="inline">|</span>
               <p className="flex items-center gap-1">
-                Diseñado por 
-                <a 
-                  href="https://automatizaya-ia.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                Diseñado por
+                <a
+                  href="https://automatizaya-ia.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-brand-accent transition-colors font-medium"
                 >
                   Automatiza Ya

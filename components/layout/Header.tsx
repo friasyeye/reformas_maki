@@ -43,67 +43,85 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${isScrolled || isOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6 md:py-8'
-          }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out bg-white/95 backdrop-blur-md shadow-sm py-1 md:pt-1 md:pb-0"
       >
         {/* 
-           DESKTOP: Full width with extreme horizontal padding for absolute edge alignment
+           DESKTOP: Full width with refined horizontal padding
            MOBILE: Standard mobile layout logic preserved
         */}
-        <div className="w-full px-6 md:px-16 lg:px-24 flex items-center justify-between">
+        <div className="w-full px-6 md:px-6 lg:px-8 flex items-center justify-between">
 
-          {/* LOGO - Extreme Left Absolute */}
+          {/* 1. LOGO - Left on both mobile and desktop */}
           <Link
             to="/"
             className="relative z-50 flex items-center"
           >
             <img
-              src="https://i.ibb.co/wZs1yP5F/Logo-completo-camisetas-copia.png"
+              src="https://i.ibb.co/C3vNcbys/unnamed-removebg-preview.png"
               alt="Renovamarin - Reformas Integrales Barcelona"
-              // UPDATED SIZE: Reduced slightly more to h-6 md:h-10
-              className="h-6 md:h-10 w-auto object-contain"
-              // Filter calculated to match brand-accent (#C5A059) perfectly
-              style={{
-                filter: 'brightness(0) saturate(100%) invert(73%) sepia(31%) saturate(958%) hue-rotate(358deg) brightness(89%) contrast(85%)'
-              }}
+              // Adjusted size: large but more compact for header height
+              className="h-10 md:h-16 w-auto object-contain"
             />
           </Link>
 
-          {/* Desktop Nav - Extreme Right Absolute & Hero Typographic Sync */}
-          <nav className="hidden md:flex items-center space-x-10 lg:space-x-14">
-            {desktopNavItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`
-                  font-sans text-[11.55px] font-medium uppercase tracking-[0.15em] 
-                  transition-all duration-300 hover:text-brand-accent 
-                  ${location.pathname === item.path ? 'text-brand-accent' : ''} 
-                  ${isScrolled ? 'text-stone-900' : 'text-white/90'}
-                `}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Wrapper for right-side items on mobile */}
+          <div className="flex items-center gap-4">
+            {/* 2. Desktop Nav - Hidden on mobile */}
+            <nav className="hidden md:flex items-center space-x-8 lg:space-x-10">
+              {desktopNavItems.map((item, index) => {
+                const isLast = index === desktopNavItems.length - 1;
+                if (isLast) {
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="
+                        font-sans text-[11px] font-bold uppercase tracking-[0.15em] 
+                        px-5 py-2.5 bg-stone-50 rounded-none
+                        hover:bg-slate-900 hover:text-white transition-all duration-300
+                      "
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`
+                      font-sans text-[11.55px] font-medium uppercase tracking-[0.15em] 
+                      transition-all duration-300 hover:text-brand-accent 
+                      ${location.pathname === item.path ? 'text-brand-accent' : ''} 
+                      text-stone-900
+                    `}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
 
-          {/* Mobile Menu Toggle - Position and style untouched */}
-          <button
-            className={`
-              md:hidden z-50 p-2 rounded-full transition-all duration-300
-              ${isOpen || isScrolled
-                ? 'text-stone-900'
-                : 'text-white bg-black/10 backdrop-blur-sm'
+            {/* 3. Mobile CTA Button - Visible only on mobile, next to burger */}
+            <Link
+              to="/contacto"
+              className="md:hidden font-sans text-[10px] font-bold uppercase tracking-[0.12em] px-3 py-2 bg-slate-900 text-white transition-all duration-300"
+            >
+              Presupuesto
+            </Link>
+
+            {/* 4. Mobile Menu Toggle - Far right */}
+            <button
+              className="md:hidden z-50 p-2 -mr-2 rounded-full transition-all duration-300 text-stone-900"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Abrir menú"
+            >
+              {isOpen ?
+                <X size={24} /> :
+                <Menu size={24} />
               }
-            `}
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Abrir menú"
-          >
-            {isOpen ?
-              <X size={24} /> :
-              <Menu size={24} />
-            }
-          </button>
+            </button>
+          </div>
         </div>
       </header>
 
