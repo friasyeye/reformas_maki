@@ -68,47 +68,44 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-4">
             {/* 2. Desktop Nav - Hidden on mobile */}
             <nav className="hidden md:flex items-center space-x-8 lg:space-x-10">
-              {desktopNavItems.map((item, index) => {
-                const isLast = index === desktopNavItems.length - 1;
-                if (isLast) {
-                  return (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      className="
-                        font-sans text-[12px] font-medium uppercase tracking-wide 
-                        px-5 py-2.5 bg-[#2D3949] text-white rounded-none
-                        hover:bg-[#3D4A5C] transition-all duration-300
-                      "
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                }
-                return (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className={`
-                      font-sans text-[12px] font-medium uppercase tracking-wide 
-                      transition-all duration-300 hover:text-brand-accent 
-                      ${location.pathname === item.path ? 'text-brand-accent' : ''} 
-                      text-stone-900
-                    `}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`
+                    font-sans text-[12px] font-medium uppercase tracking-wide 
+                    transition-all duration-300 hover:text-brand-accent 
+                    ${location.pathname === item.path ? 'text-brand-accent' : ''} 
+                    text-stone-900
+                  `}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {/* Desktop CTA Button */}
+              <a
+                href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20pedir%20un%20presupuesto%20personalizado!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  font-sans text-[12px] font-medium uppercase tracking-wide 
+                  px-5 py-2.5 bg-[#2D3949] text-white rounded-none
+                  hover:bg-[#3D4A5C] transition-all duration-300
+                "
+              >
+                Presupuesto
+              </a>
             </nav>
 
             {/* 3. Mobile CTA Button - Visible only on mobile, next to burger */}
-            <Link
-              to="/contacto"
+            <a
+              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20pedir%20un%20presupuesto%20personalizado!"
+              target="_blank"
+              rel="noopener noreferrer"
               className="md:hidden font-sans text-[10px] font-bold uppercase tracking-wide px-3 py-2 bg-[#2D3949] text-white transition-all duration-300"
             >
               Presupuesto
-            </Link>
+            </a>
 
             {/* 4. Mobile Menu Toggle - Far right */}
             <button

@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '../ui/Container';
 import { NAV_ITEMS } from '../../constants';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Instagram } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -57,17 +57,7 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-stone-500 min-w-[16px]" />
                 <span className="whitespace-nowrap">+34 685 62 08 22</span>
               </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/reformasmaki/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-white transition-colors group"
-                >
-                  <Instagram className="w-4 h-4 text-stone-500 group-hover:text-stone-400 transition-colors min-w-[16px]" />
-                  <span>@reformasmaki</span>
-                </a>
-              </li>
+
             </ul>
           </div>
         </div>

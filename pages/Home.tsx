@@ -367,7 +367,7 @@ export const Home: React.FC = () => {
 
 
       {/* FINAL CTA SECTION - LEFT ALIGNED STYLE */}
-      <section className="py-24 md:py-32 bg-white px-6">
+      <section className="pt-8 pb-24 md:pt-12 md:pb-32 bg-white px-6">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
