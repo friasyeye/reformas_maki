@@ -58,7 +58,7 @@ export const Header: React.FC = () => {
           >
             <img
               src="https://i.ibb.co/C3vNcbys/unnamed-removebg-preview.png"
-              alt="Renovamarin - Reformas Integrales Barcelona"
+              alt="Reformas Maki - Reformas Integrales Barcelona"
               // Adjusted size: large but more compact for header height
               className="h-10 md:h-16 w-auto object-contain"
             />
@@ -76,9 +76,9 @@ export const Header: React.FC = () => {
                       key={item.path}
                       to={item.path}
                       className="
-                        font-sans text-[11px] font-bold uppercase tracking-[0.15em] 
-                        px-5 py-2.5 bg-stone-50 rounded-none
-                        hover:bg-slate-900 hover:text-white transition-all duration-300
+                        font-sans text-[12px] font-medium uppercase tracking-wide 
+                        px-5 py-2.5 bg-[#2D3949] text-white rounded-none
+                        hover:bg-[#3D4A5C] transition-all duration-300
                       "
                     >
                       {item.label}
@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
                     key={item.path}
                     to={item.path}
                     className={`
-                      font-sans text-[11.55px] font-medium uppercase tracking-[0.15em] 
+                      font-sans text-[12px] font-medium uppercase tracking-wide 
                       transition-all duration-300 hover:text-brand-accent 
                       ${location.pathname === item.path ? 'text-brand-accent' : ''} 
                       text-stone-900
@@ -105,7 +105,7 @@ export const Header: React.FC = () => {
             {/* 3. Mobile CTA Button - Visible only on mobile, next to burger */}
             <Link
               to="/contacto"
-              className="md:hidden font-sans text-[10px] font-bold uppercase tracking-[0.12em] px-3 py-2 bg-slate-900 text-white transition-all duration-300"
+              className="md:hidden font-sans text-[10px] font-bold uppercase tracking-wide px-3 py-2 bg-[#2D3949] text-white transition-all duration-300"
             >
               Presupuesto
             </Link>
@@ -137,7 +137,7 @@ export const Header: React.FC = () => {
                 key={item.path}
                 to={item.path}
                 onClick={() => handleMobileLinkClick(item.path)}
-                className="font-sans font-medium text-3xl text-stone-900 hover:text-brand-accent transition-colors uppercase tracking-[0.15em]"
+                className="font-sans font-medium text-2xl text-stone-900 hover:text-brand-accent transition-colors uppercase tracking-wide"
               >
                 {item.label}
               </Link>

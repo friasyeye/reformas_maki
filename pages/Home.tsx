@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 import { FadeIn } from '../components/ui/FadeIn';
-import { Counter } from '../components/ui/Counter';
 import { TESTIMONIALS } from '../constants';
+import { Quote } from 'lucide-react';
 
 export const Home: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -19,13 +21,13 @@ export const Home: React.FC = () => {
   }, []);
 
   return (
-    <main className="w-full overflow-hidden">
+    <main className="w-full pt-12 md:pt-16">
 
       {/* HERO SECTION - REFINED LAYOUT */}
-      <section className="relative w-full flex flex-col bg-white pt-20 md:pt-28 pb-0">
+      <section className="relative w-full h-[800px] flex flex-col bg-white p-2">
 
         {/* Content Container - Centered */}
-        <div className="relative w-full max-w-7xl mx-auto px-4 md:px-6 mb-0 z-20">
+        <div className="relative w-full z-20">
           {/* Spacing container if needed */}
         </div>
 
@@ -34,10 +36,10 @@ export const Home: React.FC = () => {
            - Starts closer to header (pt-20/28)
            - Tighter margins (px-2 md:px-3) = Larger Image
         */}
-        <div className="relative w-full px-2 md:px-3 lg:px-4 -mt-20 md:-mt-28 h-[75vh] min-h-[600px]">
+        <div className="relative w-full h-full">
           <div className="relative w-full h-full overflow-hidden shadow-sm">
             <img
-              src="https://i.ibb.co/k2r6FNt4/Tendencias-en-decoracion-reformas-y-muebles-en-2025-y-2026-decoracion-reformas-integrales-interioris.jpg"
+              src="/assets/images/elegant-rendering-interior-design.jpg"
               alt="Reformas y Rehabilitaciones en Barcelona"
               className="w-full h-full object-cover object-center"
             />
@@ -46,7 +48,7 @@ export const Home: React.FC = () => {
 
             {/* Content Overlay - Centered Block with internal Left Alignment */}
             <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-12">
-              <FadeIn className="flex flex-col w-fit mx-auto">
+              <FadeIn className="flex flex-col w-fit mx-auto -mt-20 md:mt-0">
 
                 {/* Text Group: Left Aligned relative to each other */}
                 <div className="flex flex-col items-start text-left">
@@ -71,102 +73,241 @@ export const Home: React.FC = () => {
                 </div>
               </FadeIn>
             </div>
-
-            {/* TRUST SIGNALS - Repositioned to Bottom Right */}
-            <div className="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-30">
-              <div className="flex items-center gap-6 md:gap-10 text-white/90">
-                <div className="flex flex-col items-end">
-                  <div className="text-2xl md:text-4xl font-display font-bold leading-none mb-1">
-                    <Counter value="+25" duration={3000} />
-                  </div>
-                  <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80">Años</span>
-                </div>
-
-                {/* Divider */}
-                <div className="w-px h-10 bg-white/30"></div>
-
-                <div className="flex flex-col items-end">
-                  <div className="text-2xl md:text-4xl font-display font-bold leading-none mb-1">
-                    <Counter value="+204" duration={4500} />
-                  </div>
-                  <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80">Hogares</span>
-                </div>
-
-                {/* Divider */}
-                <div className="w-px h-10 bg-white/30"></div>
-
-                <div className="flex flex-col items-end">
-                  <div className="text-2xl md:text-4xl font-display font-bold leading-none mb-1">
-                    5/5
-                  </div>
-                  <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80">Valoración</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
-
-      {/* VALUE PROPOSITION SECTION */}
-      <section className="py-24 md:py-32 bg-white">
+      {/* EMPATHY BLOCK (Storytelling) */}
+      <section className="bg-[#2D3949] pt-12 md:pt-16 pb-0 px-6">
         <Container>
-          <FadeIn className="flex flex-col items-center max-w-5xl mx-auto text-center">
-            {/* Overline */}
-            <span className="font-sans font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs text-stone-400 mb-6 md:mb-8">
-              EXCELENCIA
-            </span>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-4xl mx-auto flex flex-col items-start gap-8"
+          >
+            <p className="font-sans font-medium text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-wide">
+              A menudo, las personas que nos contactan por primera vez para valorar su proyecto se sienten inseguras. Se nota en sus preguntas y en esa barrera invisible que levantan al principio; están un poco a la defensiva. Es evidente que sus <strong className="font-bold">experiencias pasadas</strong> con las obras han sido, por decirlo suavemente, <strong className="font-bold">agotadoras y llenas de imprevistos</strong>. Ponen muchas cosas en duda y tienen un <strong className="font-bold">miedo real</strong> a perder el control de su inversión.
+            </p>
 
-            {/* Main Text */}
-            <h2 className="font-display font-normal text-xl md:text-3xl lg:text-4xl leading-relaxed text-stone-900 mb-12">
-              Expertos en la gestión completa de reformas y rehabilitación de viviendas. Optimizamos cada fase de la obra mediante rigor profesional y cumplimiento de plazos, garantizando resultados de alto valor estético y estructural para clientes que buscan solvencia y tranquilidad.
-            </h2>
+            <p className="font-sans font-medium text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-wide">
+              Es lógico que esto sea así, especialmente si alguna vez has vivido una reforma que se detuvo sin previo aviso o si los acabados finales no tuvieron nada que ver con lo que te prometieron sobre el plano. Es <strong className="font-bold">normal sentir esa preocupación</strong> y querer proteger tu hogar de la falta de profesionalidad que, desgraciadamente, abunda en este sector.
+            </p>
 
-            {/* Button */}
-            <Button
-              href="https://wa.me/34667804973?text=Hola,%20quisiera%20solicitar%20una%20consulta%20privada."
+            <p className="font-sans italic text-white/90 text-lg md:text-xl lg:text-2xl leading-snug tracking-wide mt-4">
+              Pero ocurre una cosa curiosa.
+            </p>
+
+            <p className="font-sans font-light text-white/80 text-base md:text-lg lg:text-xl leading-relaxed mt-4">
+              Desde que fundamos <strong className="font-medium text-white">Reformas Maki</strong>, hemos observado que, en cuanto nuestro equipo propio toma el control y el cronograma empieza a cumplirse día tras día, esa desconfianza inicial se disuelve. La tensión de los primeros presupuestos desaparece cuando el cliente comprueba que la palabra dada y el rigor técnico son nuestra única forma de trabajar.
+            </p>
+
+            <p className="font-sans font-medium text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-wide mt-4">
+              Esa seguridad es la que hace que, al entregar las llaves, los nervios del primer día se transformen en frases como estas:
+            </p>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* ASYMMETRIC TESTIMONIALS BLOCK (Social Proof) */}
+      <section className="bg-[#2D3949] pb-16 md:pb-16 pt-6 md:pt-12 px-6 overflow-hidden">
+        <Container>
+          <div className="max-w-6xl mx-auto relative flex flex-col md:block gap-10 md:min-h-[700px]">
+
+            {/* 1st Card - Top Left */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative md:absolute md:top-[0px] md:left-[5%] w-[88%] md:w-[400px] self-start bg-black/20 backdrop-blur-xl px-5 py-5 md:px-8 md:pt-12 md:pb-8 rounded-2xl shadow-xl border border-white/5"
+            >
+              <div className="flex flex-row md:block gap-4 items-start">
+                <Quote className="text-white/30 w-7 h-7 md:w-10 md:h-10 mb-0 md:mb-4 flex-shrink-0" />
+                <p className="font-sans italic text-white/95 text-sm md:text-lg leading-relaxed relative z-10">
+                  Muy eficientes, rápidos, limpios, cumplidores y puntuales.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 2nd Card - Right (Top) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="relative md:absolute md:top-[100px] md:right-[5%] w-[88%] md:w-[420px] self-end bg-black/20 backdrop-blur-xl px-5 py-5 md:px-8 md:pt-12 md:pb-8 rounded-2xl shadow-xl border border-white/5"
+            >
+              <div className="flex flex-row md:block gap-4 items-start">
+                <Quote className="text-white/30 w-7 h-7 md:w-10 md:h-10 mb-0 md:mb-4 flex-shrink-0" />
+                <p className="font-sans italic text-white/95 text-sm md:text-lg leading-relaxed relative z-10">
+                  Muy contentos por su limpieza, rapidez y nos ahorramos bastante comparándolo con otros presupuestos. Empresa pequeña pero eficiente (hemos tenido suerte)
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 4th Card - Left (Middle) - Now with more protagonism */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="relative md:absolute md:top-[340px] md:left-[2%] w-[88%] md:w-[450px] self-start bg-black/20 backdrop-blur-xl px-5 py-5 md:px-8 md:pt-12 md:pb-8 rounded-2xl shadow-xl border border-white/5"
+            >
+              <div className="flex flex-row md:block gap-4 items-start">
+                <Quote className="text-white/30 w-7 h-7 md:w-10 md:h-10 mb-0 md:mb-4 flex-shrink-0" />
+                <p className="font-sans italic text-white/95 text-sm md:text-lg leading-relaxed relative z-10">
+                  Super contentos con el trabajo. Son muy profesionales, nos han hecho varias cosas en casa y los acabados han sido genial. Calidad-precio de 10! Además son super simpáticos y agradables!
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 3rd Card - Right (Bottom) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="relative md:absolute md:top-[600px] md:right-[0%] w-[88%] md:w-[460px] self-end bg-black/20 backdrop-blur-xl px-5 py-5 md:px-8 md:pt-12 md:pb-8 rounded-2xl shadow-xl border border-white/5"
+            >
+              <div className="flex flex-row md:block gap-4 items-start">
+                <Quote className="text-white/30 w-7 h-7 md:w-10 md:h-10 mb-0 md:mb-4 flex-shrink-0" />
+                <p className="font-sans italic text-white/95 text-sm md:text-lg leading-relaxed relative z-10">
+                  Limpios, buenos acabados y con la profesionalidad.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Spacer to push content down below absolute positioned elements on desktop */}
+            <div className="hidden md:block h-[820px] w-full invisible"></div>
+          </div>
+
+          {/* Micro-text at the end of the section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="mt-20 md:mt-0 text-center pb-4 flex flex-col items-center gap-4"
+          >
+            <p className="font-sans text-[11px] md:text-[13px] text-white/40 tracking-wide">
+              Esto es solo una pequeña parte.<br className="hidden md:block" /> Descubre por qué nos puntúan con la máxima excelencia pulsando aquí abajo.
+            </p>
+            <a
+              href="https://www.google.es/maps/place/Reformas+Maki+Barcelona/@41.3746203,2.1288144,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4996c82cda6d9:0x4d9ebf3674e2ed1e!8m2!3d41.3746163!4d2.1313947!16s%2Fg%2F11tjx19cml?hl=es&entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 text-xs md:text-sm tracking-[0.2em] !bg-slate-900 !text-white hover:!bg-slate-800 transition-colors"
+              className="inline-block transition-opacity hover:opacity-80"
             >
-              SOLICITAR CONSULTA PRIVADA
-            </Button>
-          </FadeIn>
+              <img
+                src="/assets/images/g_reviews1.webp"
+                alt="Google Reviews - Reformas Maki"
+                className="h-6 md:h-7 w-auto object-contain grayscale opacity-70"
+              />
+            </a>
+          </motion.div>
         </Container>
       </section>
 
-      {/* PHILOSOPHY SECTION (Two Column) */}
-      <section className="py-24 md:py-32 bg-stone-50">
+      {/* PROPUESTA DE VALOR SECTION */}
+      <section className="relative z-10 bg-[#F9FAFB] pt-16 md:pt-24 pb-32 md:pb-48 px-6 overflow-hidden">
         <Container>
-          <FadeIn className="flex flex-col md:flex-row items-center gap-12 md:gap-20 lg:gap-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-4xl flex flex-col items-start text-left gap-8 relative -top-4 md:-top-8"
+          >
+            <h2 className="font-display font-bold text-stone-900 text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight uppercase">
+              Lo que realmente hacemos por ti
+            </h2>
 
-            {/* Image Column (First on Mobile, First on Desktop) */}
-            <div className="w-full md:w-1/2 order-1 md:order-1">
-              <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-stone-200">
-                <img
-                  src="/assets/images/baño_moderno.webp"
-                  alt="Cocina de diseño moderna y elegante en Barcelona"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Text Column (Second on Mobile, Second on Desktop) */}
-            <div className="w-full md:w-1/2 order-2 md:order-2 flex flex-col justify-center">
-              <div className="font-sans font-light text-stone-600 text-base md:text-lg lg:text-xl leading-loose space-y-8 md:space-y-10">
-                <p>
-                  Tu hogar es mucho más que una obra; es el reflejo de tu historia y el lugar donde sucede lo que de verdad importa. El escenario de tus desayunos con calma, cenas con amigos y momentos de desconexión.
-                </p>
-                <p>
-                  Entendemos la responsabilidad de entrar en tu casa para transformarla. Nuestra meta es que ese escenario sea tan sólido y acogedor como siempre imaginaste para tus próximos recuerdos.
-                </p>
-                <p>
-                  Nos centramos en lo esencial: crear un espacio donde la armonía te reciba al llegar y sientas, al cerrar la puerta, que estás por fin en tu propio refugio.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
+            <p className="font-sans font-medium text-stone-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide">
+              Después de tantos años, hemos aprendido que una reforma no se define solo por los materiales, sino por la gestión impecable de quienes la ejecutan. No hacemos "arreglos", creamos espacios que duran toda la vida. Por eso, nos centramos en servicios donde nuestra capacidad técnica y nuestra atención al detalle marcan una diferencia real desde el primer día:
+            </p>
+          </motion.div>
         </Container>
       </section>
+
+      {/* VISUAL BRIDGE SECTION (Overlapping Images) - Floating "Half and Half" */}
+      <section className="relative z-30 -mt-24 md:-mt-40 lg:-mt-48 px-6 pt-12 pb-0 overflow-hidden">
+        {/* Background layer: Top White/Gray, Bottom Blue - Adjusted for Mobile/Desktop */}
+        <div className="absolute inset-x-0 top-0 h-full md:h-[41%] lg:h-[41%] bg-white md:bg-[#F9FAFB] z-0"></div>
+        <div className="absolute inset-x-0 bottom-0 md:top-[41%] lg:top-[41%] bg-[#2D3949] z-0 hidden md:block"></div>
+
+        <Container className="relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-20">
+            {[
+              {
+                title: "Reformas integrales",
+                img: "/assets/images/reforma_s.webp",
+                delay: 0.1
+              },
+              {
+                title: "Rehabilitaciones",
+                img: "/assets/images/fachada_s.webp",
+                delay: 0.3
+              },
+              {
+                title: "Obra Nueva",
+                img: "/assets/images/obranueva_s.webp",
+                delay: 0.5
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: item.delay, ease: "easeOut" }}
+                className="flex flex-col group"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden rounded-none shadow-xl">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* Overlay Gradient for Text Readability */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+
+                  {/* Title Inside Image (Overlay) */}
+                  <h3 className="absolute bottom-0 left-0 w-full p-6 md:p-8 font-sans italic text-white text-lg md:text-xl lg:text-2xl leading-tight tracking-wide">
+                    {item.title}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Link to all services */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="mt-12 md:mt-16 text-left"
+          >
+            <Link
+              to="/servicios"
+              className="font-sans text-[11px] md:text-[13px] text-stone-500 md:text-white/40 tracking-wide hover:text-stone-900 md:hover:text-white transition-colors duration-300 uppercase"
+            >
+              Explorar todos nuestros servicios
+            </Link>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* CONTINUITY SECTION - Continuity for the blue background */}
+      <section className="relative z-20 bg-white md:bg-[#2D3949] pt-4 md:pt-16 pb-24 px-6 -mt-1">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            {/* Ready for future content integration */}
+          </div>
+        </Container>
+      </section>
+
 
       {/* GARANTÍA Y EJECUCIÓN SECTION (Mirror Layout) */}
       <section className="py-24 md:py-32 bg-white">
@@ -175,35 +316,34 @@ export const Home: React.FC = () => {
 
             {/* Text Column (Second on Mobile, First on Desktop - MIRROR LAYOUT) */}
             <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col justify-center">
-              <div className="font-sans font-light text-stone-600 text-base md:text-lg lg:text-xl leading-loose space-y-8 md:space-y-10">
+              <div className="font-sans font-medium text-stone-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide space-y-8 md:space-y-10">
                 <p>
-                  Contamos con nuestro propio equipo de ejecución, lo que nos permite garantizar que lo que diseñamos sobre el papel se traslada con precisión milimétrica a la realidad de tu casa. Al gestionar nosotros mismos cada fase de la obra, eliminamos los conflictos habituales entre diseñador y constructor, asegurando que el rigor técnico que nos define desde hace 35 años esté presente en cada detalle del proyecto.
+                  En Reformas Maki no dependemos de terceros. Disponer de nuestro propio equipo técnico y de obra nos permite eliminar las fisuras que suelen aparecer entre el plano y la construcción. Al asumir la responsabilidad total de cada fase, garantizamos que el rigor constructivo se mantenga intacto desde el primer trazo hasta el último remate.
+                </p>
+                <p>
+                  Nuestra metodología no admite conflictos externos ni sorpresas: lo que proyectamos es exactamente lo que construimos.
                 </p>
 
-                <div className="space-y-6">
+                <div className="space-y-6 mt-12">
                   <h3 className="font-display font-bold uppercase tracking-widest text-stone-900 text-lg md:text-xl">
-                    GARANTÍA DE CONFIANZA RENOVAMARIN
+                    Nuestro Compromiso:
                   </h3>
-                  <ul className="space-y-4">
+                  <ul className="space-y-6">
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 flex-shrink-0"></span>
-                      <span>Presupuesto cerrado sin sorpresas de última hora.</span>
+                      <span className="font-sans text-stone-600"><strong className="font-bold text-stone-900">Presupuesto Blindado:</strong> Sin desviaciones ni costes ocultos al finalizar.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 flex-shrink-0"></span>
-                      <span>Materiales premium certificados para durar.</span>
+                      <span className="font-sans text-stone-600"><strong className="font-bold text-stone-900">Cronograma Estricto:</strong> Cumplimiento riguroso de los plazos de entrega pactados.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 flex-shrink-0"></span>
-                      <span>Cumplimiento riguroso de los plazos acordados.</span>
+                      <span className="font-sans text-stone-600"><strong className="font-bold text-stone-900">Equipo en Exclusiva:</strong> Profesionales propios enfocados al 100% en la excelencia de su obra.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 flex-shrink-0"></span>
-                      <span>Equipo propio dedicado al 100% a tu proyecto.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 flex-shrink-0"></span>
-                      <span>Seguimiento directo y transparente de la obra.</span>
+                      <span className="font-sans text-stone-600"><strong className="font-bold text-stone-900">Gestión Directa:</strong> Comunicación constante y transparencia total sobre el avance del proyecto.</span>
                     </li>
                   </ul>
                 </div>
@@ -214,8 +354,8 @@ export const Home: React.FC = () => {
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-stone-200">
                 <img
-                  src="/assets/images/ejecucion_tecnica.webp"
-                  alt="reforma baño con garantía de calidad en Barcelona"
+                  src="/assets/images/office-chair-still-life.jpg"
+                  alt="Oficina de diseño minimalista"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -225,65 +365,37 @@ export const Home: React.FC = () => {
         </Container>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <section className="py-24 md:py-28 lg:py-32 bg-stone-50 overflow-hidden">
-        <Container>
-          <div className="max-w-5xl mx-auto flex flex-col items-center justify-center">
-            <FadeIn>
-              <h2 className="font-display font-medium uppercase text-3xl md:text-5xl lg:text-6xl text-stone-900 mb-16 md:mb-24 text-center leading-tight">
-                Nuestra mejor referencia
-              </h2>
-            </FadeIn>
-            <div className="relative w-full grid grid-cols-1">
-              {TESTIMONIALS.map((t, idx) => (
-                <div
-                  key={t.id}
-                  className={`
-                    col-start-1 row-start-1 w-full flex flex-col items-center justify-center text-center px-4 md:px-12
-                    transition-opacity duration-1000 ease-in-out
-                    ${activeTestimonial === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}
-                  `}
-                >
-                  <blockquote className="font-sans md:font-display font-normal md:font-medium text-lg md:text-3xl lg:text-4xl leading-relaxed md:leading-tight text-stone-500 md:text-stone-900 max-w-2xl md:max-w-5xl mx-auto mb-10 md:mb-14">
-                    "{t.text}"
-                  </blockquote>
-                  <cite className="not-italic flex flex-col items-center gap-2">
-                    <span className="font-display font-bold uppercase tracking-widest text-stone-900 text-sm md:text-2xl">
-                      {t.author}
-                    </span>
-                    <span className="font-sans font-light text-stone-500 text-xs md:text-lg tracking-wide">
-                      {t.role}
-                    </span>
-                  </cite>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
 
-      {/* FINAL CTA SECTION */}
-      <section className="py-24 lg:py-28 bg-white text-center">
+      {/* FINAL CTA SECTION - LEFT ALIGNED STYLE */}
+      <section className="py-24 md:py-32 bg-white px-6">
         <Container>
-          <FadeIn>
-            <h2 className="font-display font-medium uppercase text-3xl md:text-5xl lg:text-6xl mb-8 text-stone-900 leading-tight">
-              Cuéntanos tu idea
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-4xl flex flex-col items-start text-left gap-8"
+          >
+            <h2 className="font-display font-bold text-stone-900 text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight uppercase">
+              ¿Hablamos de tu reforma?
             </h2>
-            <p className="text-stone-500 font-light text-lg md:text-2xl mb-12 max-w-xl mx-auto">
-              Todo gran proyecto nace de una conversación. Comparte con nosotros lo que imaginas y te ayudaremos a trazar el camino más seguro para hacerlo realidad. Estamos aquí para asesorarte desde la primera idea hasta el último detalle de la obra.
+
+            <p className="font-sans font-medium text-stone-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide">
+              Nos gusta involucrarnos de verdad en cada obra que aceptamos. Por eso, preferimos la comunicación directa y sin filtros. Si buscas un equipo que responda rápido, cuide los detalles y te acompañe en cada decisión, estamos a un solo mensaje de distancia.
             </p>
+
             <Button
-              href="https://wa.me/34667804973?text=Hola,%20vengo%20de%20la%20web.%20Quiero%20un%20presupuesto%20personalizado!"
+              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web.%20Quiero%20un%20hablar%20sobre%20mi%20proyecto!"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:px-10 md:py-5 md:text-base w-full md:w-auto py-4"
+              className="mt-4 md:px-10 md:py-5 md:text-base w-full md:w-auto py-4 bg-[#2D3949] border-[#2D3949] hover:bg-[#1a232d]"
             >
-              Pedir asesoría gratuita
+              Escríbenos por WhatsApp
             </Button>
-          </FadeIn>
+          </motion.div>
         </Container>
       </section>
 
-    </main>
+    </main >
   );
 };

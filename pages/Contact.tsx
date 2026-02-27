@@ -18,7 +18,7 @@ export const Contact: React.FC = () => {
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-32">
-          
+
           {/* Form */}
           <FadeIn delay={100} className="bg-white">
             <form className="space-y-12">
@@ -32,7 +32,7 @@ export const Contact: React.FC = () => {
                   <input type="text" className="w-full bg-transparent border-b border-stone-200 py-3 focus:outline-none focus:border-stone-900 transition-all duration-300 font-light text-xl" />
                 </div>
               </div>
-              
+
               <div className="group">
                 <label className="block text-xs uppercase tracking-widest text-stone-400 mb-2 font-bold group-hover:text-stone-900 transition-colors">Email</label>
                 <input type="email" className="w-full bg-transparent border-b border-stone-200 py-3 focus:outline-none focus:border-stone-900 transition-all duration-300 font-light text-xl" />
@@ -62,25 +62,25 @@ export const Contact: React.FC = () => {
           {/* Info */}
           <FadeIn delay={200} className="flex flex-col justify-center space-y-16 lg:pl-12 border-l-0 lg:border-l border-stone-100">
             <div>
-              <h3 className="font-display font-black text-2xl mb-6 uppercase tracking-wide text-stone-900">Showroom Madrid</h3>
+              <h3 className="font-display font-black text-2xl mb-6 uppercase tracking-wide text-stone-900">Oficina Barcelona</h3>
               <p className="text-stone-500 font-light leading-relaxed text-lg">
-                Calle de la Innovación 42, Planta 1<br/>
-                28001 Madrid, España
+                Ronda guineueta vella 68<br />
+                08042 Barcelona, España
               </p>
             </div>
 
             <div>
               <h3 className="font-display font-black text-2xl mb-6 uppercase tracking-wide text-stone-900">Contacto Directo</h3>
               <p className="text-stone-500 font-light leading-relaxed text-lg">
-                <a href="mailto:info@renovamarin.com" className="hover:text-brand-accent transition-colors">info@renovamarin.com</a><br/>
-                +34 912 345 678
+                <a href="mailto:reformasmaki@gmail.com" className="hover:text-brand-accent transition-colors">reformasmaki@gmail.com</a><br />
+                +34 685 62 08 22
               </p>
             </div>
 
             <div>
               <h3 className="font-display font-black text-2xl mb-6 uppercase tracking-wide text-stone-900">Horario</h3>
               <p className="text-stone-500 font-light leading-relaxed text-lg">
-                Lunes - Viernes: 09:00 - 19:00<br/>
+                Lunes - Viernes: 09:00 - 19:00<br />
                 Sábados: Cita previa
               </p>
             </div>

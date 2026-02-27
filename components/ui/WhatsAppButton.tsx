@@ -10,7 +10,7 @@ export const WhatsAppButton: React.FC = () => {
     }, []);
 
     const handleClick = () => {
-        const phoneNumber = '34667804973'; // Número de WhatsApp de Renovamarin
+        const phoneNumber = '34685620822'; // Número de WhatsApp de Reformas Maki
         const message = encodeURIComponent('Hola, vengo de la web, quiero solicitar información');
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
         window.open(whatsappUrl, '_blank');
@@ -22,7 +22,7 @@ export const WhatsAppButton: React.FC = () => {
             className={`
         fixed bottom-6 left-6 z-50
         w-14 h-14 md:w-16 md:h-16
-        bg-[#25D366] hover:bg-[#1DA851]
+        bg-[#081B4C] hover:bg-[#06143a]
         rounded-full shadow-lg hover:shadow-2xl
         flex items-center justify-center
         transition-all duration-500 ease-out
@@ -31,9 +31,6 @@ export const WhatsAppButton: React.FC = () => {
       `}
             aria-label="Contactar por WhatsApp"
         >
-            {/* Ripple effect on hover */}
-            <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-0 group-hover:opacity-20"></span>
-
             {/* WhatsApp Logo SVG */}
             <svg
                 className="w-8 h-8 md:w-9 md:h-9 text-white transform group-hover:scale-110 transition-transform duration-300"

@@ -12,22 +12,22 @@ interface ButtonProps {
   className?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  to, 
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  to,
   href,
   target,
   rel,
-  onClick, 
-  variant = 'primary', 
-  className = '' 
+  onClick,
+  variant = 'primary',
+  className = ''
 }) => {
   const baseStyles = "inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-widest uppercase transition-all duration-300 ease-out";
-  
+
   const variants = {
-    primary: "bg-stone-900 text-white hover:bg-stone-800 border border-stone-900",
-    outline: "bg-transparent text-stone-900 border border-stone-900 hover:bg-stone-900 hover:text-white",
-    text: "bg-transparent text-stone-900 border-b border-transparent hover:border-stone-900 px-0 py-2"
+    primary: "bg-[#081B4C] text-white hover:bg-[#06143a] border border-[#081B4C]",
+    outline: "bg-transparent text-[#081B4C] border border-[#081B4C] hover:bg-[#081B4C] hover:text-white",
+    text: "bg-transparent text-[#081B4C] border-b border-transparent hover:border-[#081B4C] px-0 py-2"
   };
 
   const combinedClasses = `${baseStyles} ${variants[variant]} ${className}`;
