@@ -113,7 +113,7 @@ export const Projects: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl flex flex-col items-start text-left gap-8 mb-20"
           >
-            <h1 className="font-display font-bold text-stone-900 text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight uppercase">
+            <h1 className="font-serif italic text-stone-900 text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight">
               Nuestra trayectoria paso a paso
             </h1>
 
@@ -219,6 +219,43 @@ export const Projects: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* FINAL CTA SECTION - PROJECTS */}
+      <section className="relative h-[600px] flex items-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/images/salón_azul.webp"
+            alt="Interiorismo por Reformas Maki"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-stone-900/40 backdrop-blur-[2px]"></div>
+        </div>
+
+        <Container className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
+          >
+            <h2 className="font-serif italic text-white text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-8">
+              El primer paso para una reforma sin sorpresas.
+            </h2>
+            <p className="font-sans text-white/80 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl">
+              Cuéntanos qué necesitas y te asesoraremos sobre la mejor solución técnica para tu espacio. Un proceso honesto, de tú a tú y con resultados impecables.
+            </p>
+            <a
+              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20pedir%20asesoramiento%20tecnico!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-stone-900 px-10 py-5 font-sans font-bold uppercase tracking-[0.2em] text-[11px] md:text-xs hover:bg-[#2D3949] hover:text-white transition-all duration-500 shadow-xl"
+            >
+              Hablar con un técnico
+            </a>
+          </motion.div>
+        </Container>
+      </section>
     </>
   );
 };

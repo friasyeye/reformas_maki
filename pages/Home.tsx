@@ -219,7 +219,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl flex flex-col items-start text-left gap-8 relative -top-4 md:-top-8"
           >
-            <h2 className="font-display font-bold text-stone-900 text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight uppercase">
+            <h2 className="font-serif italic text-stone-900 text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight">
               Lo que realmente hacemos por ti
             </h2>
 
@@ -376,7 +376,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl flex flex-col items-start text-left gap-8"
           >
-            <h2 className="font-display font-bold text-stone-900 text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight uppercase">
+            <h2 className="font-serif italic text-stone-900 text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight">
               ¿Hablamos de tu reforma?
             </h2>
 

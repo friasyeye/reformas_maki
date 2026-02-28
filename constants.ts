@@ -2,8 +2,8 @@ import { NavItem, Project, Testimonial, FaqItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Inicio', path: '/' },
-  { label: 'Galeria de trabajos', path: '/galeria-de-trabajos' },
   { label: 'Servicios', path: '/servicios' },
+  { label: 'Galeria de trabajos', path: '/galeria-de-trabajos' },
   { label: 'Nosotros', path: '/nosotros' },
 ];
 

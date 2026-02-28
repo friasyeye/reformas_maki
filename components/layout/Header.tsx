@@ -22,16 +22,16 @@ export const Header: React.FC = () => {
     setIsOpen(false);
   }, [location]);
 
-  // Desktop Logic: "Inicio" is HIDDEN on home page, visible elsewhere
-  const desktopNavItems = useMemo(() => {
+  // Logic: "Inicio" is HIDDEN on home page, visible elsewhere
+  const activeNavItems = useMemo(() => {
     if (location.pathname === '/') {
-      return NAV_ITEMS;
+      return NAV_ITEMS.filter(item => item.path !== '/');
     }
+    // Ensure "Inicio" is at the start if not on home page
+    const hasInicio = NAV_ITEMS.some(item => item.path === '/');
+    if (hasInicio) return NAV_ITEMS;
     return [{ label: 'Inicio', path: '/' }, ...NAV_ITEMS];
   }, [location.pathname]);
-
-  // Mobile Logic: "Inicio" ALWAYS appears (Untouched for mobile)
-  const mobileNavItems = [{ label: 'Inicio', path: '/' }, ...NAV_ITEMS];
 
   const handleMobileLinkClick = (path: string) => {
     setIsOpen(false);
@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-4">
             {/* 2. Desktop Nav - Hidden on mobile */}
             <nav className="hidden md:flex items-center space-x-8 lg:space-x-10">
-              {NAV_ITEMS.map((item) => (
+              {activeNavItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -129,7 +129,7 @@ export const Header: React.FC = () => {
             } md:hidden flex flex-col items-center justify-center`}
         >
           <nav className="flex flex-col space-y-8 text-center px-6">
-            {mobileNavItems.map((item) => (
+            {activeNavItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}

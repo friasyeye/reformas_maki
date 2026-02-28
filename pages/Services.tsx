@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const SERVICES_DATA = [
   {
-    title: "Servicio Técnico 1 (Placeholder)",
-    content: "Descripción detallada del primer servicio. Aquí explicaremos los procesos, materiales y garantías específicas que definen la calidad de este trabajo en particular."
+    title: "Reformas Integrales",
+    content: "Transformación total de tu vivienda o local. Coordinamos todos los gremios —albañilería, fontanería, electricidad y carpintería— para que solo tengas que preocuparte de elegir los acabados. Un proceso llave en mano con control absoluto de calidad. Nos encargamos de la gestión técnica para que el proyecto cumpla con la normativa vigente sin desviaciones presupuestarias. Supervisamos cada fase personalmente, asegurando que la ejecución de los planos sea milimétrica y los tiempos de entrega se cumplan con rigor profesional."
   },
   {
-    title: "Servicio Técnico 2 (Placeholder)",
-    content: "Descripción detallada del segundo servicio. Aquí explicaremos los procesos, materiales y garantías específicas que definen la calidad de este trabajo en particular."
+    title: "Reformas Parciales",
+    content: "Renovaciones enfocadas en estancias clave como baños o cocinas. Optimizamos la distribución y actualizamos las instalaciones para mejorar la funcionalidad y el confort de tu hogar sin necesidad de una obra a gran escala. Implementamos soluciones de diseño inteligente que maximizan el espacio útil y mejoran la eficiencia energética de cada estancia. Seleccionamos materiales de alta resistencia que garantizan una estética contemporánea y una durabilidad superior frente al desgaste del uso diario."
   },
   {
-    title: "Servicio Técnico 3 (Placeholder)",
-    content: "Descripción detallada del tercer servicio. Aquí explicaremos los procesos, materiales y garantías específicas que definen la calidad de este trabajo en particular."
+    title: "Rehabilitaciones",
+    content: "Especialistas en la recuperación y refuerzo de estructuras, fachadas y elementos comunes. Unimos el respeto por la edificación original con las soluciones técnicas más modernas para garantizar la seguridad y durabilidad del inmueble. Realizamos intervenciones estructurales precisas que devuelven la solidez al edificio protegiendo su esencia arquitectónica. Aplicamos tratamientos técnicos avanzados para sanear la envolvente del inmueble y prevenir patologías constructivas derivadas del paso del tiempo."
   },
   {
-    title: "Servicio Técnico 4 (Placeholder)",
-    content: "Descripción detallada del cuarto servicio. Aquí explicaremos los procesos, materiales y garantías específicas que definen la calidad de este trabajo en particular."
+    title: "Obra Nueva",
+    content: "Ejecución de proyectos desde los cimientos. Aplicamos rigor técnico y agilidad constructiva para materializar nuevas edificaciones, siguiendo fielmente las especificaciones del arquitecto y cumpliendo estrictamente con los plazos. Transformamos los planos en realidades sólidas mediante una comunicación técnica constante con la dirección facultativa del proyecto. Nuestro equipo domina las normativas de edificación actuales para asegurar una estructura impecable y una eficiencia térmica óptima desde la base."
   },
   {
-    title: "Servicio Técnico 5 (Placeholder)",
-    content: "Descripción detallada del quinto servicio. Aquí explicaremos los procesos, materiales y garantías específicas que definen la calidad de este trabajo en particular."
+    title: "Soluciones Técnicas",
+    content: "Resolvemos problemas específicos: humedades, aislamientos térmicos/acústicos o instalaciones complejas. Diagnósticos precisos y ejecución especializada para asegurar que cada rincón de tu hogar funcione a la perfección. Identificamos el origen de las patologías mediante análisis técnicos minuciosos para aplicar la solución correctiva más eficiente y definitiva. Optimizamos el rendimiento de tus instalaciones para reducir costes de mantenimiento futuros y elevar el estándar de bienestar de tu vivienda."
   }
 ];
 
@@ -34,10 +34,10 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 md:pt-32 min-h-screen flex flex-col bg-white">
+    <div className="pt-16 md:pt-20 min-h-screen flex flex-col bg-white">
 
       {/* BLOQUE 1: Encabezado Técnico */}
-      <section className="bg-white py-24 md:py-32 px-6">
+      <section className="bg-white pt-8 md:pt-12 pb-12 md:pb-20 px-6">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -46,17 +46,20 @@ export const Services: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-start text-left"
           >
-            <h1 className="font-display font-bold text-stone-900 text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight uppercase">
+            <h1 className="font-serif italic text-stone-900 text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight mb-8">
               Especialidades y Soluciones Técnicas
             </h1>
+            <p className="font-sans font-medium text-stone-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide max-w-4xl">
+              Entendemos que cada intervención técnica requiere un enfoque distinto según la naturaleza del proyecto. Por eso, hemos estructurado nuestra experiencia en cinco áreas clave que cubren desde la mejora puntual hasta la construcción total, aplicando en cada una el rigor constructivo y la precisión que tu inversión merece para garantizar resultados reales y duraderos.
+            </p>
           </motion.div>
         </Container>
       </section>
 
-      {/* BLOQUE 3: Acordeón de Especialidades (Sección Azul) */}
-      <section className="bg-[#1A41DB] py-24 md:py-32 px-6 flex-grow">
+      {/* BLOQUE 3: Acordeón de Especialidades (Fondo Blanco) */}
+      <section className="bg-white pb-24 md:pb-32 px-6 flex-grow">
         <Container className="max-w-4xl mx-auto">
-          <div className="flex flex-col border-t border-white/20">
+          <div className="flex flex-col border-t border-stone-200">
             {SERVICES_DATA.map((service, index) => {
               const isOpen = openIndex === index;
               const number = (index + 1).toString().padStart(2, '0');
@@ -68,7 +71,7 @@ export const Services: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="border-b border-white/20"
+                  className="border-b border-stone-200"
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
@@ -76,18 +79,18 @@ export const Services: React.FC = () => {
                   >
                     <div className="flex items-center gap-6 md:gap-8 flex-grow">
                       {/* Number */}
-                      <span className="font-display font-bold text-xl md:text-2xl text-white/50 w-8 md:w-10">
+                      <span className="font-outfit font-bold text-xl md:text-2xl text-stone-300 w-8 md:w-10">
                         {number}
                       </span>
                       {/* Title */}
-                      <span className="font-display font-bold text-xl md:text-3xl text-white uppercase tracking-wide group-hover:text-gray-200 transition-colors duration-300">
+                      <span className="font-serif font-bold text-xl md:text-3xl text-stone-900 tracking-tight group-hover:text-brand-accent transition-colors duration-300">
                         {service.title}
                       </span>
                     </div>
 
                     {/* Icon */}
-                    <span className="flex-shrink-0 text-white transform transition-transform duration-300 ml-4">
-                      {isOpen ? <ChevronUp size={28} strokeWidth={1.5} /> : <ChevronDown size={28} strokeWidth={1.5} />}
+                    <span className="flex-shrink-0 text-stone-400 transform transition-transform duration-300 ml-4">
+                      {isOpen ? <ChevronUp size={24} strokeWidth={1.5} /> : <ChevronDown size={24} strokeWidth={1.5} />}
                     </span>
                   </button>
 
@@ -106,7 +109,7 @@ export const Services: React.FC = () => {
                         transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                         className="overflow-hidden pl-14 md:pl-18"
                       >
-                        <p className="text-gray-300 font-sans font-light text-base md:text-lg leading-relaxed max-w-2xl">
+                        <p className="text-stone-600 font-sans font-medium text-base md:text-lg leading-relaxed max-w-2xl">
                           {service.content}
                         </p>
                       </motion.div>

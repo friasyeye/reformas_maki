@@ -11,7 +11,7 @@ export const Render3d: React.FC = () => {
 
                 {/* SECTION A: HERO */}
                 <FadeIn className="mb-24 md:mb-32 lg:mb-32 text-center max-w-4xl mx-auto px-2 md:px-0">
-                    <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl lg:text-7xl mb-8 text-stone-900 uppercase tracking-tight sm:tracking-[0.15em] leading-none text-balance">
+                    <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl lg:text-7xl mb-8 text-stone-900 tracking-tight sm:tracking-[0.15em] leading-none text-balance">
                         Visualiza tu futuro hogar <br />
                         <span className="text-brand-accent">hoy mismo.</span>
                     </h1>
@@ -67,7 +67,7 @@ export const Render3d: React.FC = () => {
                 {/* SECTION C: THE OFFER */}
                 <section className="mb-32 bg-stone-50 py-16 px-6 md:px-12 rounded-2xl border border-stone-100">
                     <FadeIn className="text-center mb-16">
-                        <h2 className="font-display font-bold text-2xl md:text-5xl uppercase tracking-[0.15em] leading-tight text-stone-900 mb-6">
+                        <h2 className="font-display font-bold text-2xl md:text-5xl tracking-[0.15em] leading-tight text-stone-900 mb-6">
                             Una inversión sin riesgo en la casa de tus sueños
                         </h2>
                         <p className="text-stone-500 font-light text-lg md:text-xl max-w-2xl mx-auto">

@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
               className="h-36 md:h-48 w-auto object-contain mb-2 brightness-0 invert -mt-9 md:-mt-16"
             />
             <p className="text-stone-400 font-light max-w-sm -mt-2 md:-mt-4">
-              Creamos hogares con alma. Reformas exclusivas diseñadas para que cada rincón de tu casa cuente tu historia.
+              La tranquilidad de un proyecto bien ejecutado. En Reformas Maki, combinamos la solvencia técnica de los grandes proyectos con el cuidado minucioso que tu hogar merece.
             </p>
           </div>
 
