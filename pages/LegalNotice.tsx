@@ -18,9 +18,9 @@ export const LegalNotice: React.FC = () => {
 
             <div className="bg-stone-50 p-8 border border-stone-100 mb-12">
               <ul className="space-y-4 list-none pl-0">
-                <li><strong className="font-bold text-stone-900">Titular:</strong> Joel Marin Hidalgo (Reformas Maki)</li>
-                <li><strong className="font-bold text-stone-900">NIF:</strong> 39436875V</li>
-                <li><strong className="font-bold text-stone-900">Domicilio Fiscal:</strong> Ronda guineueta vella 68, 08042, Barcelona</li>
+                <li><strong className="font-bold text-stone-900">Titular:</strong> Mohamed El Mak (Reformas Maki)</li>
+                <li><strong className="font-bold text-stone-900">NIF:</strong> X8484411X</li>
+                <li><strong className="font-bold text-stone-900">Domicilio Fiscal:</strong> Calle Cáceres 23, 08028, Barcelona</li>
                 <li><strong className="font-bold text-stone-900">Correo electrónico:</strong> reformasmaki@gmail.com</li>
               </ul>
             </div>

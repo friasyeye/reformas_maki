@@ -64,8 +64,8 @@ export const Contact: React.FC = () => {
             <div>
               <h3 className="font-display font-black text-2xl mb-6 uppercase tracking-wide text-stone-900">Oficina Barcelona</h3>
               <p className="text-stone-500 font-light leading-relaxed text-lg">
-                Ronda guineueta vella 68<br />
-                08042 Barcelona, España
+                Calle Cáceres 23<br />
+                08028 Barcelona, España
               </p>
             </div>
 

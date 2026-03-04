@@ -11,7 +11,7 @@ export const WhatsAppButton: React.FC = () => {
 
     const handleClick = () => {
         const phoneNumber = '34685620822'; // Número de WhatsApp de Reformas Maki
-        const message = encodeURIComponent('Hola, vengo de la web, quiero solicitar información');
+        const message = encodeURIComponent('Hola, vengo de la web, me gustaria hablar de mi proyecto');
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
         window.open(whatsappUrl, '_blank');
     };

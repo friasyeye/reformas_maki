@@ -39,20 +39,52 @@ export const Services: React.FC = () => {
       {/* BLOQUE 1: Encabezado Técnico */}
       <section className="bg-white pt-8 md:pt-12 pb-12 md:pb-20 px-6">
         <Container>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start text-left"
-          >
-            <h1 className="font-serif italic text-stone-900 text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight mb-8">
-              Especialidades y Soluciones Técnicas
-            </h1>
-            <p className="font-sans font-medium text-stone-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide max-w-4xl">
-              Entendemos que cada intervención técnica requiere un enfoque distinto según la naturaleza del proyecto. Por eso, hemos estructurado nuestra experiencia en cinco áreas clave que cubren desde la mejora puntual hasta la construcción total, aplicando en cada una el rigor constructivo y la precisión que tu inversión merece para garantizar resultados reales y duraderos.
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-20 items-center max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-start text-left"
+            >
+              <h1 className="font-serif italic text-stone-900 text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight mb-8">
+                Especialidades y Soluciones Técnicas
+              </h1>
+              <p className="font-sans font-medium text-stone-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide max-w-4xl">
+                Entendemos que cada intervención técnica requiere un enfoque distinto según la naturaleza del proyecto. Por eso, hemos estructurado nuestra experiencia en cinco áreas clave que cubren desde la mejora puntual hasta la construcción total, aplicando en cada una el rigor constructivo y la precisión que tu inversión merece para garantizar resultados reales y duraderos.
+              </p>
+
+              {/* Imagen - Solo visible en móvil, debajo del texto */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="md:hidden mt-8 relative aspect-[4/3] w-full overflow-hidden bg-stone-100 shadow-xl"
+              >
+                <img
+                  src="/assets/images/reformas-barcelona-comedor-pequeno-blanco-eixample.webp"
+                  alt="Rehabilitación de fachada en el barrio de Gràcia, Barcelona."
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* Imagen - Solo visible en escritorio, columna derecha */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="hidden md:block relative aspect-[4/3] w-full overflow-hidden bg-stone-100 shadow-xl"
+            >
+              <img
+                src="/assets/images/reformas-barcelona-comedor-pequeno-blanco-eixample.webp"
+                alt="Reforma de baño moderno en el barrio de Gràcia, Barcelona."
+                className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-105"
+              />
+            </motion.div>
+          </div>
         </Container>
       </section>
 
@@ -119,6 +151,44 @@ export const Services: React.FC = () => {
               );
             })}
           </div>
+        </Container>
+      </section>
+
+      {/* BLOQUE CTA: Dale a tu hogar el carácter que merece */}
+      <section className="relative h-[600px] flex items-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/images/reforma-integral-sillon-azul2-montjuic.webp"
+            alt="Reforma de local comercial en el barrio de Gràcia, Barcelona."
+            className="w-full h-full object-cover object-right md:object-center"
+          />
+          <div className="absolute inset-0 bg-stone-900/40 backdrop-blur-[2px]"></div>
+        </div>
+
+        <Container className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
+          >
+            <h2 className="font-serif italic text-white text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-8">
+              Dale a tu hogar el carácter que merece.
+            </h2>
+            <p className="font-sans text-white/80 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl">
+              Transformamos espacios con la precisión y el cuidado que solo un equipo propio puede garantizar. Sin intermediarios, con total transparencia y a un solo mensaje de distancia.
+            </p>
+            <a
+              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20hablar%20de%20mi%20proyecto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-stone-900 px-10 py-5 font-sans font-bold uppercase tracking-[0.2em] text-[11px] md:text-xs hover:bg-[#2D3949] hover:text-white transition-all duration-500 shadow-xl"
+            >
+              Hablar con nosotros
+            </a>
+          </motion.div>
         </Container>
       </section>
 

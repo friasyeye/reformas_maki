@@ -58,7 +58,7 @@ export const Header: React.FC = () => {
           >
             <img
               src="https://i.ibb.co/C3vNcbys/unnamed-removebg-preview.png"
-              alt="Reformas Maki - Reformas Integrales Barcelona"
+              alt="Rehabilitación de fachada en el barrio de Sants, Barcelona."
               // Adjusted size: large but more compact for header height
               className="h-10 md:h-16 w-auto object-contain"
             />

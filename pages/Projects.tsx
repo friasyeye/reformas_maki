@@ -23,25 +23,25 @@ const BENTO_CLASSES = [
 ];
 
 const GALLERY_IMAGES = [
-  '/assets/images/bañoazul_3.webp',
-  '/assets/images/comedor.webp',
-  '/assets/images/exterior_casa.webp',
-  '/assets/images/baño_m.webp',
+  '/assets/images/reformas-barcelona-banoazul-3-eixample.webp',
+  '/assets/images/empresa-reformas-comedor-gracia.webp',
+  '/assets/images/reforma-integral-exterior-casa-eixample.webp',
+  '/assets/images/reformas-barcelona-bano-m-sarria.webp',
 
-  '/assets/images/cocina_lateral.webp',
-  '/assets/images/ventana_comedor.webp',
-  '/assets/images/exterior_escaleras.webp',
-  '/assets/images/baño1_azul.webp',
+  '/assets/images/empresa-reformas-cocina-lateral-les-corts.webp',
+  '/assets/images/reforma-integral-ventana-comedor-sarria.webp',
+  '/assets/images/empresa-reformas-exterior-escaleras-montjuic.webp',
+  '/assets/images/empresa-reformas-bano1-azul-gracia.webp',
 
-  '/assets/images/baño_blanco.webp',
-  '/assets/images/tejado (1).webp',
-  '/assets/images/proceso.webp',
-  '/assets/images/escalera_exteriormarrón.webp',
+  '/assets/images/empresa-reformas-bano-blanco-montjuic.webp',
+  '/assets/images/reforma-integral-tejado-1-eixample.webp',
+  '/assets/images/reformas-barcelona-proceso-sarria.webp',
+  '/assets/images/reforma-integral-escalera-exteriormarron-eixample.webp',
 
-  '/assets/images/baño2.webp',
-  '/assets/images/estructura.webp',
-  '/assets/images/exterior.webp',
-  '/assets/images/baño.webp',
+  '/assets/images/reformas-barcelona-bano2-montjuic.webp',
+  '/assets/images/reforma-integral-estructura-sants.webp',
+  '/assets/images/reforma-integral-exterior-gracia.webp',
+  '/assets/images/reformas-barcelona-bano-sants.webp',
 ];
 
 export const Projects: React.FC = () => {
@@ -140,7 +140,7 @@ export const Projects: React.FC = () => {
               >
                 <img
                   src={src}
-                  alt={`Proyecto ${index + 1}`}
+                  alt={`Reforma de baño moderno en el barrio de Gràcia, Barcelona.`}
                   className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
@@ -207,7 +207,7 @@ export const Projects: React.FC = () => {
                 <motion.img
                   key={selectedImageIndex}
                   src={GALLERY_IMAGES[selectedImageIndex]}
-                  alt={`Proyecto ${selectedImageIndex + 1} de ${GALLERY_IMAGES.length}`}
+                  alt={`Construcción de obra nueva en el barrio de Eixample, Barcelona.`}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
@@ -224,8 +224,8 @@ export const Projects: React.FC = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/images/salón_azul.webp"
-            alt="Interiorismo por Reformas Maki"
+            src="/assets/images/reforma-integral-salon-azul-sarria.webp"
+            alt="Reforma integral de piso en el barrio de Eixample, Barcelona."
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-stone-900/40 backdrop-blur-[2px]"></div>
@@ -246,7 +246,7 @@ export const Projects: React.FC = () => {
               Cuéntanos qué necesitas y te asesoraremos sobre la mejor solución técnica para tu espacio. Un proceso honesto, de tú a tú y con resultados impecables.
             </p>
             <a
-              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20pedir%20asesoramiento%20tecnico!"
+              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20hablar%20de%20mi%20proyecto"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-stone-900 px-10 py-5 font-sans font-bold uppercase tracking-[0.2em] text-[11px] md:text-xs hover:bg-[#2D3949] hover:text-white transition-all duration-500 shadow-xl"

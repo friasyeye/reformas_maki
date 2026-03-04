@@ -39,8 +39,8 @@ export const Home: React.FC = () => {
         <div className="relative w-full h-full">
           <div className="relative w-full h-full overflow-hidden shadow-sm">
             <img
-              src="/assets/images/elegant-rendering-interior-design.jpg"
-              alt="Reformas y Rehabilitaciones en Barcelona"
+              src="/assets/images/reforma-integral-elegant-rendering-interior-design-eixample.jpg"
+              alt="Reforma de baño moderno en el barrio de Sants, Barcelona."
               className="w-full h-full object-cover object-center"
             />
             {/* Dark Overlay for Text Contrast */}
@@ -194,14 +194,14 @@ export const Home: React.FC = () => {
               Esto es solo una pequeña parte.<br className="hidden md:block" /> Descubre por qué nos puntúan con la máxima excelencia pulsando aquí abajo.
             </p>
             <a
-              href="https://www.google.es/maps/place/Reformas+Maki+Barcelona/@41.3746203,2.1288144,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4996c82cda6d9:0x4d9ebf3674e2ed1e!8m2!3d41.3746163!4d2.1313947!16s%2Fg%2F11tjx19cml?hl=es&entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D"
+              href="https://maps.app.goo.gl/9nakWLA5YfUNYoM79"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block transition-opacity hover:opacity-80"
             >
               <img
-                src="/assets/images/g_reviews1.webp"
-                alt="Google Reviews - Reformas Maki"
+                src="/assets/images/reformas-barcelona-g-reviews1-les-corts.webp"
+                alt="Rehabilitación de fachada en el barrio de Gràcia, Barcelona."
                 className="h-6 md:h-7 w-auto object-contain grayscale opacity-70"
               />
             </a>
@@ -241,17 +241,17 @@ export const Home: React.FC = () => {
             {[
               {
                 title: "Reformas integrales",
-                img: "/assets/images/reforma_s.webp",
+                img: "/assets/images/reforma-integral-reforma-s-les-corts.webp",
                 delay: 0.1
               },
               {
                 title: "Rehabilitaciones",
-                img: "/assets/images/fachada_s.webp",
+                img: "/assets/images/reformas-barcelona-fachada-s-montjuic.webp",
                 delay: 0.3
               },
               {
                 title: "Obra Nueva",
-                img: "/assets/images/obranueva_s.webp",
+                img: "/assets/images/reforma-integral-obranueva-s-sants.webp",
                 delay: 0.5
               }
             ].map((item, index) => (
@@ -354,8 +354,8 @@ export const Home: React.FC = () => {
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-stone-200">
                 <img
-                  src="/assets/images/office-chair-still-life.jpg"
-                  alt="Oficina de diseño minimalista"
+                  src="/assets/images/empresa-reformas-office-chair-still-life-sants.jpg"
+                  alt="Diseño de interiores premium en el barrio de Sants, Barcelona."
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -385,7 +385,7 @@ export const Home: React.FC = () => {
             </p>
 
             <Button
-              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web.%20Quiero%20un%20hablar%20sobre%20mi%20proyecto!"
+              href="https://wa.me/34685620822?text=Hola,%20vengo%20de%20la%20web,%20me%20gustaria%20hablar%20de%20mi%20proyecto"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 md:px-10 md:py-5 md:text-base w-full md:w-auto py-4 bg-[#2D3949] border-[#2D3949] hover:bg-[#1a232d]"

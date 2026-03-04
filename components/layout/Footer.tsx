@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '../ui/Container';
 import { NAV_ITEMS } from '../../constants';
 import { Link } from 'react-router-dom';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
             {/* Logo Image replaced text title */}
             <img
               src="https://i.ibb.co/C3vNcbys/unnamed-removebg-preview.png"
-              alt="REFORMAS MAKI"
+              alt="Construcción de obra nueva en el barrio de Montjuïc, Barcelona."
               // TRIPLED SIZE AND WHITE COLOR: Increased to h-36 md:h-48, made white with filters
               // Final tiny nudge up for absolute perfect alignment
               className="h-36 md:h-48 w-auto object-contain mb-2 brightness-0 invert -mt-9 md:-mt-16"
@@ -57,7 +57,17 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-stone-500 min-w-[16px]" />
                 <span className="whitespace-nowrap">+34 685 62 08 22</span>
               </li>
-
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-stone-500 mt-0.5 min-w-[16px]" />
+                <a
+                  href="https://maps.app.goo.gl/9nakWLA5YfUNYoM79"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-stone-100 transition-colors leading-relaxed"
+                >
+                  Carrer de Càceres, 23, Sants-Montjuïc, 08028 Barcelona
+                </a>
+              </li>
             </ul>
           </div>
         </div>

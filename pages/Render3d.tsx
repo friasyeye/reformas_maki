@@ -34,7 +34,7 @@ export const Render3d: React.FC = () => {
                                 <div className="aspect-[4/3] overflow-hidden bg-stone-100 shadow-lg">
                                     <img
                                         src="/assets/images/sagrada-familia-antes-cocina-1.webp"
-                                        alt="Estado actual de la vivienda antes de la reforma"
+                                        alt="Rehabilitación de fachada en el barrio de Eixample, Barcelona."
                                         className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
@@ -54,7 +54,7 @@ export const Render3d: React.FC = () => {
                                 <div className="aspect-[4/3] overflow-hidden bg-stone-100 shadow-xl ring-1 ring-stone-900/5">
                                     <img
                                         src="/assets/images/render3d.webp"
-                                        alt="Propuesta de diseño 3D realista de Reformas Maki"
+                                        alt="Reforma de cocina rústica en el barrio de Montjuïc, Barcelona."
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>

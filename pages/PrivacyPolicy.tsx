@@ -21,9 +21,9 @@ export const PrivacyPolicy: React.FC = () => {
                 <h2 className="font-display font-bold text-xl text-stone-900 uppercase tracking-wide mb-4 border-b border-stone-200 pb-2">
                   Responsable del Tratamiento
                 </h2>
-                <p>Joel Marin Hidalgo</p>
-                <p>NIF: 39436875V</p>
-                <p>Domicilio: Ronda guineueta vella 68, 08042, Barcelona</p>
+                <p>Mohamed El Mak</p>
+                <p>NIF: X8484411X</p>
+                <p>Domicilio: Calle Cáceres 23, 08028, Barcelona</p>
                 <p>Email: reformasmaki@gmail.com</p>
               </section>
 

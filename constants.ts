@@ -17,7 +17,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 2,
-    text: "Profesionales con mayúsculas. Tanto en el trabajo como en el trato, Joel y sus chicos son unos cracks! Contacté con ellos para una reforma integral y desde la planificación te das cuenta de la experiencia que tienen.",
+    text: "Profesionales con mayúsculas. Tanto en el trabajo como en el trato, Mohamed y sus chicos son unos cracks! Contacté con ellos para una reforma integral y desde la planificación te das cuenta de la experiencia que tienen.",
     author: "Toni R.",
     role: "Reforma integral"
   },
