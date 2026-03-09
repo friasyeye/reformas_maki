@@ -38,11 +38,24 @@ export const Home: React.FC = () => {
         */}
         <div className="relative w-full h-full">
           <div className="relative w-full h-full overflow-hidden shadow-sm">
-            <img
-              src="/assets/images/reforma-integral-elegant-rendering-interior-design-eixample.jpg"
-              alt="Reforma de baño moderno en el barrio de Sants, Barcelona."
-              className="w-full h-full object-cover object-center"
-            />
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcSet="/assets/images/reforma-integral-elegant-rendering-interior-design-eixample-mobile.webp"
+                type="image/webp"
+              />
+              <source
+                srcSet="/assets/images/reforma-integral-elegant-rendering-interior-design-eixample-desktop.webp"
+                type="image/webp"
+              />
+              <img
+                src="/assets/images/reforma-integral-elegant-rendering-interior-design-eixample-desktop.webp"
+                alt="Reforma de baño moderno en el barrio de Sants, Barcelona."
+                className="w-full h-full object-cover object-center"
+                fetchPriority="high"
+                loading="eager"
+              />
+            </picture>
             {/* Dark Overlay for Text Contrast */}
             <div className="absolute inset-0 bg-black/30"></div>
 
