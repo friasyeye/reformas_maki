@@ -132,10 +132,10 @@ export const About: React.FC = () => {
 
             {/* Card 1: Trato cercano */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white border border-stone-300 hover:border-[#2D3949] rounded-none py-12 px-8 flex flex-col items-center text-center gap-6 transition-all duration-300 w-full group"
             >
               <HeartHandshake className="w-16 h-16 text-[#2D3949]" strokeWidth={1.5} />
@@ -149,10 +149,10 @@ export const About: React.FC = () => {
 
             {/* Card 2: Rapidez */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-white border border-stone-300 hover:border-[#2D3949] rounded-none py-12 px-8 flex flex-col items-center text-center gap-6 transition-all duration-300 w-full group"
             >
               <Clock className="w-16 h-16 text-[#2D3949]" strokeWidth={1.5} />
@@ -166,10 +166,10 @@ export const About: React.FC = () => {
 
             {/* Card 3: Transparencia */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="bg-white border border-stone-300 hover:border-[#2D3949] rounded-none py-12 px-8 flex flex-col items-center text-center gap-6 transition-all duration-300 w-full group"
             >
               <ShieldCheck className="w-16 h-16 text-[#2D3949]" strokeWidth={1.5} />
@@ -183,10 +183,10 @@ export const About: React.FC = () => {
 
             {/* Card 4: Limpieza */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               className="bg-white border border-stone-300 hover:border-[#2D3949] rounded-none py-12 px-8 flex flex-col items-center text-center gap-6 transition-all duration-300 w-full group"
             >
               <Sparkles className="w-16 h-16 text-[#2D3949]" strokeWidth={1.5} />

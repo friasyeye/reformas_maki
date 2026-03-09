@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node optimize-images.js && vite build",
+    "build": "node optimize-images.js && node generate-sitemap.js && vite build",
     "preview": "vite preview",
     "start": "serve -s dist -p 80"
   },
