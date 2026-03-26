@@ -100,22 +100,10 @@ export const Home: React.FC = () => {
             className="max-w-4xl mx-auto flex flex-col items-start gap-8"
           >
             <p className="font-sans font-medium text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-wide">
-              A menudo, las personas que nos contactan por primera vez para valorar su proyecto se sienten inseguras. Se nota en sus preguntas y en esa barrera invisible que levantan al principio; están un poco a la defensiva. Es evidente que sus <strong className="font-bold">experiencias pasadas</strong> con las obras han sido, por decirlo suavemente, <strong className="font-bold">agotadoras y llenas de imprevistos</strong>. Ponen muchas cosas en duda y tienen un <strong className="font-bold">miedo real</strong> a perder el control de su inversión.
+              Es lógico desconfiar cuando experiencias pasadas en el sector han estado marcadas por la falta de rigor y los imprevistos. Sin embargo, en <em>Reformas Maki</em> esa barrera desaparece en cuanto nuestro equipo técnico toma el control: la incertidumbre inicial se disuelve al ver que el cronograma se cumple con precisión día tras día.
             </p>
 
             <p className="font-sans font-medium text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-wide">
-              Es lógico que esto sea así, especialmente si alguna vez has vivido una reforma que se detuvo sin previo aviso o si los acabados finales no tuvieron nada que ver con lo que te prometieron sobre el plano. Es <strong className="font-bold">normal sentir esa preocupación</strong> y querer proteger tu hogar de la falta de profesionalidad que, desgraciadamente, abunda en este sector.
-            </p>
-
-            <p className="font-sans italic text-white/90 text-lg md:text-xl lg:text-2xl leading-snug tracking-wide mt-4">
-              Pero ocurre una cosa curiosa.
-            </p>
-
-            <p className="font-sans font-light text-white/80 text-base md:text-lg lg:text-xl leading-relaxed mt-4">
-              Desde que fundamos <strong className="font-medium text-white">Reformas Maki</strong>, hemos observado que, en cuanto nuestro equipo propio toma el control y el cronograma empieza a cumplirse día tras día, esa desconfianza inicial se disuelve. La tensión de los primeros presupuestos desaparece cuando el cliente comprueba que la palabra dada y el rigor técnico son nuestra única forma de trabajar.
-            </p>
-
-            <p className="font-sans font-medium text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-wide mt-4">
               Esa seguridad es la que hace que, al entregar las llaves, los nervios del primer día se transformen en frases como estas:
             </p>
           </motion.div>
@@ -215,7 +203,7 @@ export const Home: React.FC = () => {
               <img
                 src="/assets/images/reformas-barcelona-g-reviews1-les-corts.webp"
                 alt="Rehabilitación de fachada en el barrio de Gràcia, Barcelona."
-                className="h-6 md:h-7 w-auto object-contain grayscale opacity-70"
+                className="h-10 md:h-12 w-auto object-contain opacity-80"
               />
             </a>
           </motion.div>

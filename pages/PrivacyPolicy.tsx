@@ -21,7 +21,7 @@ export const PrivacyPolicy: React.FC = () => {
                 <h2 className="font-display font-bold text-xl text-stone-900 uppercase tracking-wide mb-4 border-b border-stone-200 pb-2">
                   Responsable del Tratamiento
                 </h2>
-                <p>Mohamed El Mak</p>
+                <p>Mohamed El Maki</p>
                 <p>NIF: X8484411X</p>
                 <p>Domicilio: Calle Cáceres 23, 08028, Barcelona</p>
                 <p>Email: reformasmaki@gmail.com</p>

@@ -20,10 +20,8 @@ export const Footer: React.FC = () => {
           <div className="col-span-2 md:col-span-2">
             {/* Logo Image replaced text title */}
             <img
-              src="https://i.ibb.co/C3vNcbys/unnamed-removebg-preview.png"
+              src="/logo.webp"
               alt="Construcción de obra nueva en el barrio de Montjuïc, Barcelona."
-              // TRIPLED SIZE AND WHITE COLOR: Increased to h-36 md:h-48, made white with filters
-              // Final tiny nudge up for absolute perfect alignment
               className="h-36 md:h-48 w-auto object-contain mb-2 brightness-0 invert -mt-9 md:-mt-16"
             />
             <p className="text-stone-400 font-light max-w-sm -mt-2 md:-mt-4">
